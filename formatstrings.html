@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computer Security</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bufoverflow.html">Buffer Overflows</a></li>
+                <li>Format String Exploits</li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>     
+        <h1>Format String Exploits</h1>   
+        <p>
+            Format string vulnerabilities present themselves due to improper use of the printf()
+            function in the C programming language. Printf() takes in a format string and an 
+            unlimited number of parameters that will be used by the format string. A format string 
+            is simply a string that contains <em>format specifiers</em> (these start with the '%' 
+            character) that tell the function how to translate the data that corresponds. 
+        </p>
+
+        <p>
+            Here is a table of format specifiers and what they do:
+        </p>
+
+        <table border="1">
+            <tr>
+                <th>Format Specifier</th>
+                <th>Function</th>
+            </tr>
+
+            <tr>
+                <td>%d</td>
+                <td>Prints an integer.</td>
+            </tr>
+
+            <tr>
+                <td>%u</td>
+                <td>Prints an unsigned integer.</td>
+            </tr>
+
+            <tr>
+                <td>%f</td>
+                <td>Prints a double.</td>
+            </tr>
+
+            <tr>
+                <td>%x</td>
+                <td>Prints a hexadecimal number.</td>
+            </tr>
+
+            <tr>
+                <td>%n</td>
+                <td>Writes the number of characters that have been printed so far, to the memory address that corresponds.</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
