@@ -15,7 +15,7 @@
         <h1>Format String Exploits</h1>   
         <p>
             Format string vulnerabilities present themselves due to improper use of the printf()
-            function in the C programming language. Printf() takes in a format string and an 
+            function in the C programming language when using . Printf() takes in a format string and an 
             unlimited number of parameters that will be used by the format string. A format string 
             is simply a string that contains <em>format specifiers</em> (these start with the '%' 
             character) that tell the function how to translate the data that corresponds. 
@@ -56,6 +56,49 @@
                 <td>Writes the number of characters that have been printed so far, to the memory address that corresponds.</td>
             </tr>
         </table>
+
+        <p>
+            Here is the right way to print user input:
+        </p>
+
+        <pre>
+printf("%s", input);
+        </pre>
+
+        <p>
+            And here is the wrong way to print user input:
+        </p>
+
+        <pre>
+printf(input);
+        </pre>
+
+        <p>
+            The problem with this, is that the  user can input their own format string as 
+            input, which can have unintended results. This is beacuse the format string tells 
+            printf() how many parameters are expected. If you supply a format string that 
+            has more format specifiers than it has parameters, printf() will print out 
+            memory that is not specified. 
+        </p>
+
+        <h2>Example</h2>
+
+        <pre>
+printf("%s %s %s", string1, string2)
+        </pre>
+
+        <p>
+            The above code will print out string1, then string2, and then will print out whatever
+            comes above string2 in memory. This can be used to leak information in memory that 
+            the user is not supposed to be able to access.
+        </p>
+
+        <p>
+            You can also use format strings to write data using the %n format specifier. 
+            Since %n writes to the next address it finds on the stack. An attacker is able 
+            to use this to write to memory addresses that they are not supposed to be able 
+            to access. This can lead to an attacker gaining control of the program/computer. 
+        </p>
 
     </body>
 </html>
