@@ -85,6 +85,8 @@ nav *{
 }
 
 .code-container pre{
+    padding: 1em;
+    border-radius: 25px;
     background-color: #393e46;
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
 }
@@ -110,13 +112,53 @@ nav *{
 }
 
 .info > h1, .info >h2{
-    color: white;
+    color: #eeeeee;
     background-color: transparent;
     text-shadow: 3px 3px 2px black;
     font-weight: bold;
 }
 
 .homepage{
-    background-image: url(background-2048x1536.png);
+    background-image: url(background-1440x900.png);
     position: relative;
 }
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+th, td{
+    padding:1em;
+    background-color: transparent;
+}
+
+tr:nth-child(odd){
+    background-color: #393e46;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {}
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .homepage{
+        background-image: url(background-1440x900.png);
+     }
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200) {
+
+    .homepage{
+        background-image: url(background-2048x1536.png);
+    }
+
+ } 
