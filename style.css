@@ -1,0 +1,27 @@
+*{
+    background-color: #212429;
+    color: white;
+}
+
+h1{
+    color: #00ffb1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items{
+    padding-right: 1em;
+}
+
+.nav-items a{
+    text-decoration: none;
+}
