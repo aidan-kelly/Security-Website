@@ -51,7 +51,7 @@ nav *{
 .nav-links{
     display: flex;
     list-style-type: none;
-    
+
 }
 
 .nav-items{
@@ -100,7 +100,7 @@ nav *{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
 
 .info{
@@ -117,6 +117,6 @@ nav *{
 }
 
 .homepage{
-    background-image: url(background.png);
+    background-image: url(background-2048x1536.png);
     position: relative;
 }
