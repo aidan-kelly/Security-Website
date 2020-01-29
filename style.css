@@ -13,9 +13,11 @@ white = eeeeee
 */
 
 
-body{
+html, body{
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 *{
@@ -33,6 +35,7 @@ Nav bar work.
 */
 
 nav{
+    z-index: 2;
     margin: 0;
     padding: 0;
     background-color: #393e46;
@@ -86,3 +89,34 @@ nav *{
     font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
 }
 
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.info{
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.info > h1, .info >h2{
+    color: white;
+    background-color: transparent;
+    text-shadow: 3px 3px 2px black;
+    font-weight: bold;
+}
+
+.homepage{
+    background-image: url(background.png);
+    position: relative;
+}
