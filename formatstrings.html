@@ -3,103 +3,110 @@
     <head>
         <title>Format Strings</title>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bufoverflow.html">Buffer Overflows</a></li>
-                <li>Format String Exploits</li>
-                <li><a href="resources.html">Resources</a></li>
+            <ul class="nav-links">
+                <li class="nav-items"><a href="index.html">Home</a></li>
+                <li class="seperator">|</li>
+                <li class="nav-items"><a href="bufoverflow.html">Buffer Overflows</a></li>
+                <li class="seperator">|</li>
+                <li class="nav-items">Format String Exploits</li>
+                <li class="seperator">|</li>
+                <li class="nav-items"><a href="resources.html">Resources</a></li>
             </ul>
         </nav>     
-        <h1>Format String Exploits</h1>   
-        <p>
-            Format string vulnerabilities present themselves due to improper use of the printf()
-            function in the C programming language. Printf() takes in a format string and an 
-            unlimited number of parameters that will be used by the format string. A format string 
-            is simply a string that contains <em>format specifiers</em> (these start with the '%' 
-            character) that tell the function how to translate the data that corresponds. 
-        </p>
 
-        <p>
-            Here is a table of format specifiers and what they do:
-        </p>
+        <div class="article">
+            <h1>Format String Exploits</h1>   
+            <p>
+                Format string vulnerabilities present themselves due to improper use of the printf()
+                function in the C programming language. Printf() takes in a format string and an 
+                unlimited number of parameters that will be used by the format string. A format string 
+                is simply a string that contains <em>format specifiers</em> (these start with the '%' 
+                character) that tell the function how to translate the data that corresponds. 
+            </p>
 
-        <table border="1">
-            <tr>
-                <th>Format Specifier</th>
-                <th>Function</th>
-            </tr>
+            <p>
+                Here is a table of format specifiers and what they do:
+            </p>
 
-            <tr>
-                <td>%d</td>
-                <td>Prints an integer.</td>
-            </tr>
+            <table border="1">
+                <tr>
+                    <th>Format Specifier</th>
+                    <th>Function</th>
+                </tr>
 
-            <tr>
-                <td>%u</td>
-                <td>Prints an unsigned integer.</td>
-            </tr>
+                <tr>
+                    <td>%d</td>
+                    <td>Prints an integer.</td>
+                </tr>
 
-            <tr>
-                <td>%f</td>
-                <td>Prints a double.</td>
-            </tr>
+                <tr>
+                    <td>%u</td>
+                    <td>Prints an unsigned integer.</td>
+                </tr>
 
-            <tr>
-                <td>%x</td>
-                <td>Prints a hexadecimal number.</td>
-            </tr>
+                <tr>
+                    <td>%f</td>
+                    <td>Prints a double.</td>
+                </tr>
 
-            <tr>
-                <td>%n</td>
-                <td>Writes the number of characters that have been printed so far, to the memory address that corresponds.</td>
-            </tr>
-        </table>
+                <tr>
+                    <td>%x</td>
+                    <td>Prints a hexadecimal number.</td>
+                </tr>
 
-        <p>
-            Here is the right way to print user input:
-        </p>
+                <tr>
+                    <td>%n</td>
+                    <td>Writes the number of characters that have been printed so far, to the memory address that corresponds.</td>
+                </tr>
+            </table>
 
-        <pre>
-printf("%s", input);
-        </pre>
+            <p>
+                Here is the right way to print user input:
+            </p>
 
-        <p>
-            And here is the wrong way to print user input:
-        </p>
+            <pre>
+    printf("%s", input);
+            </pre>
 
-        <pre>
-printf(input);
-        </pre>
+            <p>
+                And here is the wrong way to print user input:
+            </p>
 
-        <p>
-            The problem with this, is that the  user can input their own format string as 
-            input, which can have unintended results. This is beacuse the format string tells 
-            printf() how many parameters are expected. If you supply a format string that 
-            has more format specifiers than it has parameters, printf() will print out 
-            memory that is not specified. 
-        </p>
+            <pre>
+    printf(input);
+            </pre>
 
-        <h2>Example</h2>
+            <p>
+                The problem with this, is that the  user can input their own format string as 
+                input, which can have unintended results. This is beacuse the format string tells 
+                printf() how many parameters are expected. If you supply a format string that 
+                has more format specifiers than it has parameters, printf() will print out 
+                memory that is not specified. 
+            </p>
 
-        <pre>
-printf("%s %s %s", string1, string2)
-        </pre>
+            <h2>Example</h2>
 
-        <p>
-            The above code will print out string1, then string2, and then will print out whatever
-            comes above string2 in memory. This can be used to leak information in memory that 
-            the user is not supposed to be able to access.
-        </p>
+            <pre>
+    printf("%s %s %s", string1, string2)
+            </pre>
 
-        <p>
-            You can also use format strings to write data using the %n format specifier. 
-            Since %n writes to the next address it finds on the stack. An attacker is able 
-            to use this to write to memory addresses that they are not supposed to be able 
-            to access. This can lead to an attacker gaining control of the program/computer. 
-        </p>
+            <p>
+                The above code will print out string1, then string2, and then will print out whatever
+                comes above string2 in memory. This can be used to leak information in memory that 
+                the user is not supposed to be able to access.
+            </p>
+
+            <p>
+                You can also use format strings to write data using the %n format specifier. 
+                Since %n writes to the next address it finds on the stack. An attacker is able 
+                to use this to write to memory addresses that they are not supposed to be able 
+                to access. This can lead to an attacker gaining control of the program/computer. 
+            </p>
+        </div>
 
     </body>
 </html>

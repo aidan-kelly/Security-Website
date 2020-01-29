@@ -1,6 +1,12 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 *{
     background-color: #212429;
     color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 
 h1{
@@ -8,14 +14,22 @@ h1{
 }
 
 nav{
+    margin: 0;
+    padding: 0;
+    background-color: #00ffb1;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+nav *{
+    background-color: #00ffb1;
+}
+
 .nav-links{
     display: flex;
     list-style-type: none;
+    
 }
 
 .nav-items{
@@ -24,4 +38,14 @@ nav{
 
 .nav-items a{
     text-decoration: none;
+    color: #212429;
+}
+
+.article{
+    margin: 1.5em;
+}
+
+.seperator{
+    color: #212429;
+    padding-right: 1em;
 }
