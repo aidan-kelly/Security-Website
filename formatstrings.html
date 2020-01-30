@@ -34,7 +34,7 @@
                 Here is a table of format specifiers and what they do:
             </p>
 
-            <table border="1">
+            <table>
                 <tr class="table-row">
                     <th>Format Specifier</th>
                     <th>Function</th>
@@ -114,6 +114,14 @@ printf("%s %s %s", string1, string2)</pre>
                 Since %n writes to the next address it finds on the stack. An attacker is able 
                 to use this to write arbitrary data to memory addresses that they are not supposed to be able 
                 to access. This can lead to an attacker gaining control of the program/computer.
+            </p>
+
+            <div class="image-container">
+                <img id="xkcd" src="xkcd.png"/>
+            </div>
+
+            <p>
+                This is what happens when you don't follow best practices. Don't use printf(input).
             </p>
         </div>
 
