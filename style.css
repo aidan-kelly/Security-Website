@@ -1,16 +1,61 @@
 /*
-COLORS:
-    Mint = 00ffb1
-    Gray Background = 212429
-*/
-
-/*
 Testing color palatte:
 Base grey = 232931
 Lighter grey = 393e46
 Mint = 4ecca3
 white = eeeeee
 */
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    .homepage{
+        background-image: url(background-1440x900.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+     }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .homepage{
+        background-image: url(background-1440x900.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+     }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   .homepage{
+       background-image: url(background-1440x900.png);
+       background-size: cover;
+       background-repeat: no-repeat;
+       position: relative;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .homepage{
+        background-image: url(background-2048x1536.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+     }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200) {
+
+   .homepage{
+       background-image: url(background-2048x1536.png);
+       background-size: cover;
+       background-repeat: no-repeat;
+       position: relative;
+   }
+
+} 
 
 
 html, body{
@@ -114,15 +159,8 @@ nav *{
 .info > h1, .info >h2{
     color: #eeeeee;
     background-color: transparent;
-    text-shadow: 3px 3px 2px black;
+    text-shadow: 0 1px 2px rbga(0,0,0, 0.5);
     font-weight: bold;
-}
-
-.homepage{
-    background-image: url(background-1440x900.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
 }
 
 table{
@@ -139,33 +177,3 @@ th, td{
 tr:nth-child(odd){
     background-color: #393e46;
 }
-
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
- }
-
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {}
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
-    .homepage{
-        background-image: url(background-1440x900.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-     }
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {}
- 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200) {
-
-    .homepage{
-        background-image: url(background-2048x1536.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
- } 
