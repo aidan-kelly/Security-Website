@@ -1,14 +1,7 @@
-/*
-Testing color palatte:
-Base grey = 232931
-Lighter grey = 393e46
-Mint = 4ecca3
-white = eeeeee
-*/
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
     .homepage{
-        background-image: url(background-1440x900.png);
+        background-image: url(images/background-1440x900.png);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -18,7 +11,7 @@ white = eeeeee
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .homepage{
-        background-image: url(background-1440x900.png);
+        background-image: url(images/background-1440x900.png);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -28,7 +21,7 @@ white = eeeeee
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
    .homepage{
-       background-image: url(background-1440x900.png);
+       background-image: url(images/background-1440x900.png);
        background-size: cover;
        background-repeat: no-repeat;
        position: relative;
@@ -38,7 +31,7 @@ white = eeeeee
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .homepage{
-        background-image: url(background-2048x1536.png);
+        background-image: url(images/background-2048x1536.png);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -49,14 +42,13 @@ white = eeeeee
 @media only screen and (min-width: 1200) {
 
    .homepage{
-       background-image: url(background-2048x1536.png);
+       background-image: url(images/background-2048x1536.png);
        background-size: cover;
        background-repeat: no-repeat;
        position: relative;
    }
 
 } 
-
 
 html, body{
     padding: 0;
@@ -71,10 +63,6 @@ html, body{
 h1{
     color: #4ecca3;
 }
-
-/*
-Nav bar work.
-*/
 
 nav{
     z-index: 2;
@@ -105,13 +93,13 @@ nav *{
     color: #4ecca3;
 }
 
-.article{
-    margin: 1.5em;
-}
-
 .seperator{
     color: #232931;
     padding-right: 1em;
+}
+
+.article{
+    margin: 1.5em;
 }
 
 .image-container{
@@ -132,7 +120,6 @@ nav *{
 #book{
     width: 20%;
 }
-
 
 .code-container{
     display: flex;
@@ -172,6 +159,7 @@ nav *{
     background-color: transparent;
     text-shadow: 0 1px 2px rbga(0,0,0, 0.5);
     font-weight: bold;
+    letter-spacing: 0.2em;
 }
 
 table, th, td{
